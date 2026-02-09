@@ -1,0 +1,286 @@
+/* ============================
+   PHASMOPHOBIA FAN PAGE THEME
+   Dark Horror Style
+============================ */
+
+/* Alap betűtípus */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --main-bg: #0a0a0f;
+    --card-bg: #14141f;
+    --accent: #00ffcc;
+    --danger: #ff0044;
+    --text-main: #e6e6e6;
+    --text-muted: #9ca3af;
+    --glow: 0 0 10px rgba(0,255,204,0.6);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: radial-gradient(circle at top, #141424, #050509);
+    color: var(--text-main);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050509;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+/* ============================
+   NAVBAR
+============================ */
+
+.navbar {
+    background: rgba(5, 5, 9, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--accent);
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: var(--glow);
+}
+
+.nav-link {
+    color: var(--text-main) !important;
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+/* ============================
+   CAROUSEL
+============================ */
+
+.carousel-item img {
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(60%) contrast(120%);
+}
+
+.carousel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, #050509);
+}
+
+/* ============================
+   SECTIONS
+============================ */
+
+section {
+    padding: 60px 10px;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-shadow: var(--glow);
+}
+
+/* ============================
+   TECH LIST
+============================ */
+
+.list-group-item {
+    background: var(--card-bg);
+    border: 1px solid #1f1f2f;
+    color: var(--text-main);
+    transition: 0.3s;
+}
+
+.list-group-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--glow);
+}
+
+/* ============================
+   GALLERY
+============================ */
+
+#gallery img {
+    transition: 0.4s;
+    border: 2px solid transparent;
+}
+
+#gallery img:hover {
+    transform: scale(1.08) rotate(1deg);
+    border-color: var(--accent);
+    box-shadow: var(--glow);
+}
+
+/* ============================
+   CARDS
+============================ */
+
+.card {
+    background: linear-gradient(145deg, #0f0f1a, #1a1a2a);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 30px rgba(0,255,204,0.4);
+}
+
+.card img {
+    filter: grayscale(40%) brightness(80%);
+    transition: 0.4s;
+}
+
+.card:hover img {
+    filter: grayscale(0%) brightness(100%);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    color: var(--accent);
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ============================
+   QUIZ
+============================ */
+
+#quiz .card {
+    background: rgba(20,20,35,0.95);
+    border: 1px solid var(--accent);
+    box-shadow: var(--glow);
+}
+
+#quiz button {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    transition: 0.3s;
+}
+
+#quiz button:hover {
+    background: var(--accent);
+    color: black;
+    box-shadow: var(--glow);
+}
+
+/* ============================
+   RESULT TEXT
+============================ */
+
+#result {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* ============================
+   FOOTER
+============================ */
+
+footer {
+    background: linear-gradient(to top, #000, #0a0a15);
+    border-top: 1px solid var(--accent);
+}
+
+footer p {
+    color: var(--text-muted);
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
+
+/* Pulzáló glow */
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px var(--accent); }
+    50% { box-shadow: 0 0 20px var(--accent); }
+    100% { box-shadow: 0 0 5px var(--accent); }
+}
+
+.navbar-brand {
+    animation: pulse 3s infinite;
+}
+
+/* Fading in */
+section {
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 768px) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+}
