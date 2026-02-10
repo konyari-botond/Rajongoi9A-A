@@ -344,11 +344,20 @@ section {
 
 /* HIBÁS */
 .quiz_answer-btn.wrong {
-    background: rgba(255, 0, 68, 0.25);
+    background: rgba(255, 0, 68, 0.35); /* kicsit sötétebb piros */
     border-color: var(--danger);
     color: var(--danger);
-    box-shadow: 0 0 25px rgba(255,0,68,0.9);
-    animation: shake 0.35s;
+    box-shadow: 0 0 20px rgba(255,0,68,0.8);
+    animation: shake 0.4s;
+}
+
+/* Shake animáció rossz válasznál */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+    100% { transform: translateX(0); }
 }
 
 /* Következő gomb */
