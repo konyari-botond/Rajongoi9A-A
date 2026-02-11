@@ -284,3 +284,116 @@ section {
     }
 
 }
+#quiz {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+/* Quiz kártya */
+#quiz .quiz-card {
+    background: linear-gradient(145deg, #0f0f1a, #1a1a2a);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 35px;
+    width: 100%;
+    max-width: 540px;
+    box-shadow: var(--glow);
+    animation: fadeIn 1.2s ease;
+}
+
+/* Kérdés */
+#quiz h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: var(--glow);
+}
+
+/* Válasz gombok */
+.answer-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--text-main);
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+/* Hover */
+.quiz_answer-btn:hover {
+    background: rgba(0, 255, 204, 0.15);
+    box-shadow: var(--glow);
+    transform: translateX(6px);
+}
+
+/* HELYES */
+.quiz_answer-btn.correct {
+    background: rgba(0, 255, 204, 0.25);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 25px rgba(0,255,204,0.9);
+}
+
+/* HIBÁS */
+.quiz_answer-btn.wrong {
+    background: rgba(255, 0, 68, 0.35); /* kicsit sötétebb piros */
+    border-color: var(--danger);
+    color: var(--danger);
+    box-shadow: 0 0 20px rgba(255,0,68,0.8);
+    animation: shake 0.4s;
+}
+
+/* Shake animáció rossz válasznál */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+    100% { transform: translateX(0); }
+}
+
+/* Következő gomb */
+#quiz #nextBtn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    padding: 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+#quiz #nextBtn:hover {
+    background: var(--accent);
+    color: black;
+    box-shadow: var(--glow);
+}
+
+/* Pontszám */
+#quiz #score {
+    margin-top: 25px;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent);
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: var(--glow);
+}
+
+/* Shake animáció rossz válasznál */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
