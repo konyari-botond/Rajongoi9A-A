@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+     <!--Menü-->
+    <nav
+      class="navbar navbsar-expand-sm bg-primary navbar-light justify-content-center"
+    >
+      <ul class="navbar-nav font-weight-bold">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="index.html">Ismertető</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="demon.html">Szörnyek</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="quiz.html">Kvíz</a>
+        </li>
+      </ul>
+    </nav>
+
     <section id="quiz">
         <div class="quiz-card">
             <h4 id="question">Kérdés betöltése...</h4>
@@ -188,6 +208,8 @@
 
         startQuiz();
     </script>
-
+ <!--Lábléc-->
+    <div class="footer"></div>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
