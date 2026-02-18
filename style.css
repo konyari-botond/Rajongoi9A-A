@@ -247,4 +247,134 @@ body.light .navbar {
     #nextBtn {
         width: 100%;
     }
+
+    margin-top: 30px;
+    font-size: 14px;
+    color: #6aff9a;
+    opacity: 0.7;
+}
+
+/* =================================
+   QUIZ – TELJESEN IZOLÁLT STÍLUS
+================================= */
+
+#quiz {
+    --quiz-accent: #00ffcc;
+    --quiz-danger: #ff0044;
+    --quiz-text: #ffffff;
+    --quiz-bg1: #0f0f1a;
+    --quiz-bg2: #1a1a2a;
+    --quiz-glow: 0 0 15px #00ffcc;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+/* Kártya */
+#quiz .quiz-card {
+    background: linear-gradient(145deg, var(--quiz-bg1), var(--quiz-bg2));
+    border: 1px solid var(--quiz-accent);
+    border-radius: 20px;
+    padding: 35px;
+    width: 100%;
+    max-width: 540px;
+    box-shadow: var(--quiz-glow);
+}
+
+/* Kérdés */
+#quiz .quiz-question {
+    color: var(--quiz-accent);
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Válasz gomb */
+#quiz .quiz-answer-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--quiz-accent);
+    color: var(--quiz-text);
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover */
+#quiz .quiz-answer-btn:hover {
+    background: rgba(0, 255, 204, 0.15);
+    box-shadow: var(--quiz-glow);
+    transform: translateX(6px);
+}
+
+/* HELYES */
+#quiz .quiz-answer-btn.quiz-correct {
+    background: rgba(0, 255, 204, 0.25);
+    color: var(--quiz-accent);
+    box-shadow: 0 0 25px rgba(0,255,204,0.9);
+}
+
+/* HIBÁS */
+#quiz .quiz-answer-btn.quiz-wrong {
+    background: rgba(255, 0, 68, 0.35);
+    color: var(--quiz-danger);
+    border-color: var(--quiz-danger);
+    animation: quiz-shake 0.4s;
+}
+
+/* Egyedi animáció (nem globális név) */
+@keyframes quiz-shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+
+/* Következő gomb */
+#quiz .quiz-next-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--quiz-accent);
+    color: var(--quiz-accent);
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+#quiz .quiz-next-btn:hover {
+    background: var(--quiz-accent);
+    color: black;
+    box-shadow: var(--quiz-glow);
+}
+
+/* Pontszám */
+#quiz .quiz-score {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--quiz-accent);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Reszponzív */
+@media (max-width: 600px) {
+    #quiz .quiz-card {
+        padding: 25px;
+    }
+
+    #quiz .quiz-answer-btn {
+        padding: 12px;
+    }
+}
+#quiz {
+    background-image: url(../hatterkep.jfif); 
 }
