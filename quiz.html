@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
      <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="kvizhezstyle.css" />
 </head>
 <body>
      <!--Menü-->
@@ -285,6 +285,39 @@ function showQuestion() {
             button.dataset.correct = "true";
         }
 
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestion < quiz.length - 1) {
+                currentQuestion++;
+                showQuestion();
+            } else {
+                showScore();
+            }
+        });
+
+       function showScore() {
+    questionEl.innerText = 'A quiz véget ért! 🎉';
+    resetState();
+
+    scoreEl.innerText = `Pontszám: ${score} / ${quiz.length}`;
+
+    // Következő gomb átalakítása vissza gombbá
+    nextBtn.innerText = 'Vissza a főoldalra';
+    nextBtn.style.display = 'block';
+
+    nextBtn.onclick = () => {
+        window.location.href = "index.html";
+    };
+}
+
+        function startQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            nextBtn.innerText = 'Következő';
+            nextBtn.style.display = 'none';
+            scoreEl.innerText = '';
+            showQuestion();
+        }
+
         button.addEventListener('click', selectAnswer);
         answerButtonsEl.appendChild(button);
     });
@@ -338,6 +371,7 @@ startQuiz();
 </script>
         
   startQuiz();
+  
     </script>
  <!--Lábléc-->
     <div class="footer"></div>
