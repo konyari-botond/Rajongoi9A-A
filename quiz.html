@@ -11,14 +11,10 @@
     <link rel="stylesheet" href="kvizhezstyle.css" />
 </head>
 <body class="quiz">
-     <!--Menü-->
+    
     <nav
-      class="navbar navbar-expand-sm bg-primary navbar-light justify-content-center"
-    >
+      class="navbar navbar-expand-sm bg-primary navbar-light justify-content-center">
       <ul class="navbar-nav font-weight-bold">
-        <li class="nav-item">
-          <a class="nav-link text-light" href="index.html">Ismertető</a>
-        </li>
 
         <li class="nav-item">
           <a class="nav-link text-light" href="demon.html">Szörnyek</a>
@@ -26,6 +22,10 @@
 
         <li class="nav-item">
           <a class="nav-link text-light" href="quiz.html">Kvíz</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" href="palyak.html">Pályák</a>
         </li>
       </ul>
     </nav>
@@ -39,6 +39,7 @@
     </div>
 </section>
 
+<button id="homeBtn" class="home-btn"> Vissza a Főoldalra</button>
 <script>
 const quiz = [
     { question: "Melyik eszközzel lehet szellemdobozt használni?", answers: [
@@ -54,9 +55,9 @@ const quiz = [
         { text: "Ghost Orbs Level 6", correct: true }
     ]},
     { question: "Mikor jelenik meg a DOTS Projector bizonyíték?", answers: [
-        { text: "Ha a szellem áthalad rajta", correct: true },
         { text: "Ha vadászat indul", correct: false },
         { text: "Ha a játékos meghal", correct: false },
+        { text: "Ha a szellem áthalad rajta", correct: true },
         { text: "Ha sötét van a teherautóban", correct: false }
     ]},
     { question: "Melyik szellem gyorsabb a sötétben?", answers: [
@@ -66,21 +67,21 @@ const quiz = [
         { text: "Shade", correct: false }
     ]},
     { question: "Melyik szellem NEM vadászik magas sanityn?", answers: [
+        { text: "Shade", correct: true },    
         { text: "Demon", correct: false },
-        { text: "Shade", correct: true },
         { text: "Oni", correct: false },
         { text: "Yokai", correct: false }
     ]},
     { question: "Mi állítja meg ideiglenesen a szellemet vadászat közben?", answers: [
-        { text: "Smudge Stick", correct: true },
         { text: "Crucifix", correct: false },
         { text: "Salt", correct: false },
-        { text: "Candle", correct: false }
+        { text: "Candle", correct: false },
+        { text: "Smudge Stick", correct: true },
     ]},
     { question: "Melyik szellem reagál erősebben az elektronikus eszközökre?", answers: [
-        { text: "Yokai", correct: true },
         { text: "Spirit", correct: false },
         { text: "Goryo", correct: false },
+        { text: "Yokai", correct: true },
         { text: "Mare", correct: false }
     ]},
     { question: "Melyik tárgy akadályozza meg a vadászat elindulását?", answers: [
@@ -96,10 +97,10 @@ const quiz = [
         { text: "Poltergeist", correct: false }
     ]},
     { question: "Melyik szellem tud teleportálni a játékoshoz?", answers: [
-        { text: "Banshee", correct: true },
         { text: "Shade", correct: false },
         { text: "Goryo", correct: false },
-        { text: "Spirit", correct: false }
+        { text: "Spirit", correct: false },
+        { text: "Banshee", correct: true }
     ]},
     { question: "Melyik bizonyíték látható kizárólag kamerán?", answers: [
         { text: "DOTS Projector", correct: false },
@@ -108,9 +109,9 @@ const quiz = [
         { text: "EMF 5", correct: false }
     ]},
     { question: "Melyik szellem erős több játékos közelében?", answers: [
-        { text: "Oni", correct: true },
         { text: "Shade", correct: false },
         { text: "Spirit", correct: false },
+        { text: "Oni", correct: true },
         { text: "Yurei", correct: false }
     ]},
     { question: "Mikor nem működik a Spirit Box?", answers: [
@@ -120,15 +121,15 @@ const quiz = [
         { text: "Ha EMF 5 van", correct: false }
     ]},
     { question: "Melyik szellem gyorsabb vadászat közben hidegben?", answers: [
-        { text: "Hantu", correct: true },
         { text: "Demon", correct: false },
         { text: "Revenant", correct: false },
-        { text: "Mare", correct: false }
+        { text: "Mare", correct: false },
+        { text: "Hantu", correct: true }
     ]},
     { question: "Melyik szellem képes több tárgyat egyszerre eldobni?", answers: [
-        { text: "Poltergeist", correct: true },
         { text: "Shade", correct: false },
         { text: "Goryo", correct: false },
+        { text: "Poltergeist", correct: true },
         { text: "Spirit", correct: false }
     ]}
 ];
@@ -136,7 +137,12 @@ const quiz = [
 const questionEl = document.getElementById("question");
 const answerButtonsEl = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("nextBtn");
-const scoreEl = document.getElementById("score");
+const scoreEl = document.getElementById("score")
+const homeBtn = document.getElementById("homeBtn");
+
+homeBtn.addEventListener("click", () => {
+    window.location.href = "index.html";
+});
 
 let currentQuestion = 0;
 let score = 0;
@@ -229,26 +235,18 @@ nextBtn.addEventListener("click", () => {
 
 });
 
-
-/* VÉGE */
 function showScore() {
 
     resetState();
 
-    questionEl.innerText = "A quiz véget ért! 🎉";
+    questionEl.innerText = "A quiz véget ért!";
 
     scoreEl.innerText = `Pontszám: ${score} / ${quiz.length}`;
 
-    nextBtn.innerText = "Vissza a főoldalra";
-    nextBtn.style.display = "block";
-
-    nextBtn.onclick = () => {
-        window.location.href = "index.html";
-    };
+    questionEl.classList.add("quiz-end");
+    scoreEl.classList.add("quiz-end");
 }
 
-
-// INDÍTÁS GOMB
 nextBtn.innerText = "Indítás";
 nextBtn.style.display = "block";
 
@@ -256,7 +254,6 @@ nextBtn.addEventListener("click", () => {
     startQuiz();
 }, { once: true });
 </script>        
- <!--Lábléc-->
     <div class="footer"></div>
     <script src="/bootstrap/js/bootstrap.min.js">
 </script>
