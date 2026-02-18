@@ -7,5 +7,17 @@ color: white;
   font-weight: bold;
     color: #dc3545;
 }
+a{
+  color: white
+}
+a:hover {
+  color: #dc3545 ; 
+}
+ 
+  color: rgb(245, 90, 90) ;
+
+.fejléc a:hover {
+color: white ;
+}
 
 
