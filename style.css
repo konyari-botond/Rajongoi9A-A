@@ -1,115 +1,253 @@
 /* Alap beállítások */
-* {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+}
+
+/* Fejléc */
+header {
+    background-color: #000;
+    color: #ff3333;
+    padding: 25px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* MENÜ (NAVBAR) */
+.navbar {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.navbar ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Courier New", monospace;
+    display: flex;
 }
 
-/* Háttér */
-body {
-    background: radial-gradient(circle, #0f1a14, #020403);
-    color: #b6ffcc;
-    min-height: 100vh;
-    padding: 20px;
+/* Menü linkek */
+.navbar li {
+    margin: 0 15px;
 }
 
-/* Fő konténer */
-.container {
-    max-width: 900px;
-    margin: auto;
-    background: rgba(5, 15, 10, 0.9);
-    border: 2px solid #1aff7c;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 0 20px rgba(26, 255, 124, 0.3);
-}
-
-/* Címek */
-h1, h2, h3 {
-    color: #1aff7c;
-    text-shadow: 0 0 8px rgba(26, 255, 124, 0.7);
-    margin-bottom: 15px;
-}
-
-/* Szöveg */
-p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #caffdd;
-}
-
-/* Gombok */
-button {
-    background: transparent;
-    color: #1aff7c;
-    border: 2px solid #1aff7c;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
+.navbar a {
+    color: #ddd;
+    text-decoration: none;
     font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
     transition: all 0.3s ease;
 }
 
-button:hover {
-    background: #1aff7c;
-    color: #020403;
-    box-shadow: 0 0 15px rgba(26, 255, 124, 0.8);
+/* Hover effekt */
+.navbar a:hover {
+    background-color: #ff3333;
+    color: #fff;
 }
 
-/* Input mezők */
-input, textarea, select {
-    width: 100%;
-    background: #020403;
-    color: #b6ffcc;
-    border: 1px solid #1aff7c;
-    padding: 8px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+/* Aktív menüpont */
+.navbar a.active {
+    background-color: #cc0000;
+    color: white;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    box-shadow: 0 0 8px rgba(26, 255, 124, 0.6);
+/* Fő tartalom */
+main {
+    padding: 20px;
+    background-color: #3a3a3a;
+    min-height: 400px;
 }
 
-/* Kártyák / panel */
+/* Kártyák */
 .card {
-    background: rgba(2, 6, 4, 0.8);
-    border: 1px solid #1aff7c;
-    border-radius: 6px;
+    background-color: #1f1f1f;
+    border-left: 4px solid #ff3333;
     padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: inset 0 0 10px rgba(26, 255, 124, 0.1);
-}
-
-/* Státusz kijelző */
-.status {
-    padding: 8px 12px;
-    border-left: 4px solid #1aff7c;
-    background: rgba(26, 255, 124, 0.1);
     margin-bottom: 15px;
 }
 
-/* "Kamera zaj" effekt */
-.noise {
-    position: relative;
-    overflow: hidden;
+/* Gomb */
+button {
+    background-color: #ff3333;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.noise::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-    pointer-events: none;
+button:hover {
+    background-color: #b30000;
 }
 
-/* Footer */
+/* Lábléc */
 footer {
+    background-color: #000;
+    color: #777;
     text-align: center;
+    padding: 15px;
+}
+/* Quiz rész */
+#quiz {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.quiz-card {
+    background-color: #1f1f1f;
+    border: 2px solid #ff3333;
+    border-radius: 8px;
+    padding: 25px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+}
+
+/* Kérdés */
+#question {
+    margin-bottom: 20px;
+}
+
+/* Válasz gombok */
+#answer-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer-btn {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.answer-btn:hover {
+    background-color: #444;
+}
+
+/* Helyes / rossz */
+.correct {
+    background-color: green !important;
+}
+
+.wrong {
+    background-color: darkred !important;
+}
+
+/* Következő gomb */
+#nextBtn {
+    margin-top: 20px;
+    background-color: #ff3333;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nextBtn:hover {
+    background-color: #cc0000;
+}
+
+/* Pontszám */
+#score {
+    margin-top: 15px;
+    font-size: 18px;
+}
+/* THEME GOMB */
+.theme-toggle {
+    text-align: center;
+    margin: 15px 0;
+}
+
+#themeBtn {
+    background: #ff3333;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#themeBtn:hover {
+    background: #cc0000;
+}
+
+
+/* LIGHT MODE */
+body.light {
+    background: linear-gradient(135deg, #f5f5f5, #ddd);
+    color: #111;
+}
+
+body.light .quiz-card {
+    background: #fff;
+    color: #111;
+    border-color: #cc0000;
+}
+
+body.light .answer-btn {
+    background: #eee;
+    color: #111;
+}
+
+body.light .navbar {
+    background: #cc0000;
+}
+
+
+/* PONTSZÁM ANIMÁCIÓ */
+#score.animate {
+    animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* MOBIL OPTIMALIZÁLÁS */
+@media (max-width: 600px) {
+
+    .quiz-card {
+        width: 95%;
+        padding: 25px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+
+    #answer-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    #nextBtn {
+        width: 100%;
+    }
+
     margin-top: 30px;
     font-size: 14px;
     color: #6aff9a;
