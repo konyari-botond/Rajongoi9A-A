@@ -200,3 +200,17 @@ body {
     #nextBtn { width: 100%; }
     .navbar ul { flex-direction: column; gap: 12px; }
 }
+
+/* KÖZÉPRE IGAZÍTOTT FŐ GOMB */
+#nextBtn {
+    display: block;
+    margin: 25px auto;   /* felül/alul 25px, bal/jobb auto = közép */
+    text-align: center;
+}
+
+.quiz-next-btn,
+#nextBtn {
+    display: block;
+    margin: 25px auto 0 auto; /* felül tér, középen */
+    text-align: center;
+}
