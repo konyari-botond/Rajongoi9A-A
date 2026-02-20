@@ -104,7 +104,7 @@
   </button>
 
 </div>
-<table class="table">
+<table class="table" id="palyaTabla">
   <thead>
     <tr>
       <th>#</th>
@@ -128,5 +128,46 @@
     </tr>
   </tbody>
 </table>
+<script>
+const carousel = document.querySelector('#carouselExampleIndicators');
+const tabla = document.querySelector('#palyaTabla tbody');
+
+const palyak = [
+  { nev: "Tanglewood Drive", meret: "Kicsi", kinez: "Családi ház" },
+  { nev: "Ridgeview Court", meret: "Kicsi", kinez: "Családi ház" },
+  { nev: "Willow Street", meret: "Kicsi", kinez: "Családi ház" },
+  { nev: "Edgefield Road", meret: "Közepes", kinez: "Családi ház" },
+  { nev: "Edgefield Road", meret: "Közepes", kinez: "Családi ház" },
+  { nev: "Grafton Farmhouse", meret: "Közepes", kinez: "Farmház" },
+  { nev: "Camp Woodwind", meret: "Kicsi", kinez: "Tábor" },
+  { nev: "Maple Lodge Campsite", meret: "Közepes", kinez: "Tábor" },
+  { nev: "Prison", meret: "Nagy", kinez: "Börtön" },
+  { nev: "Sunny Meadows", meret: "Nagy", kinez: "Elmegyógyintézet" },
+  { nev: "Bleasdale Farmhouse", meret: "Közepes", kinez: "Farmház" },
+  { nev: "Point Hope", meret: "Közepes", kinez: "Világítótorony" },
+  { nev: "Brownstone High School", meret: "Nagy", kinez: "Iskola" },
+  { nev: "Sunny Meadows", meret: "Nagy", kinez: "Elmegyógyintézet" }
+];
+
+function tablaFrissit(index) {
+  const palya = palyak[index];
+  tabla.innerHTML = `
+    <tr>
+      <td>${index + 1}</td>
+      <td>${palya.nev}</td>
+      <td>${palya.meret}</td>
+      <td>${palya.kinez}</td>
+    </tr>
+  `;
+}
+
+// BETÖLTÉSKOR is frissít
+tablaFrissit(0);
+
+// képváltáskor frissít
+carousel.addEventListener('slid.bs.carousel', function (event) {
+  tablaFrissit(event.to);
+});
+</script>
 </body>
 </html>
