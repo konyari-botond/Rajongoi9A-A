@@ -107,7 +107,7 @@
 <table class="table" id="palyaTabla">
   <thead>
     <tr>
-      <th>#</th>
+      
       <th>Név</th>
       <th>Méret</th>
       <th>Kinézet</th>
@@ -115,7 +115,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      
       <td>János</td>
       <td>25</td>
       <td>Budapest</td>
@@ -133,27 +133,27 @@ const carousel = document.querySelector('#carouselExampleIndicators');
 const tabla = document.querySelector('#palyaTabla tbody');
 
 const palyak = [
-  { nev: "Tanglewood Drive", meret: "Kicsi", kinez: "Családi ház" },
-  { nev: "Ridgeview Court", meret: "Kicsi", kinez: "Családi ház" },
-  { nev: "Willow Street", meret: "Kicsi", kinez: "Családi ház" },
-  { nev: "Edgefield Road", meret: "Közepes", kinez: "Családi ház" },
-  { nev: "Edgefield Road", meret: "Közepes", kinez: "Családi ház" },
-  { nev: "Grafton Farmhouse", meret: "Közepes", kinez: "Farmház" },
-  { nev: "Camp Woodwind", meret: "Kicsi", kinez: "Tábor" },
-  { nev: "Maple Lodge Campsite", meret: "Közepes", kinez: "Tábor" },
-  { nev: "Prison", meret: "Nagy", kinez: "Börtön" },
-  { nev: "Sunny Meadows", meret: "Nagy", kinez: "Elmegyógyintézet" },
-  { nev: "Bleasdale Farmhouse", meret: "Közepes", kinez: "Farmház" },
-  { nev: "Point Hope", meret: "Közepes", kinez: "Világítótorony" },
-  { nev: "Brownstone High School", meret: "Nagy", kinez: "Iskola" },
-  { nev: "Sunny Meadows", meret: "Nagy", kinez: "Elmegyógyintézet" }
+  { nev: "Tanglewood Drive", meret: "Kicsi", kinez: "Tanglewood egy kisebb pálya, három hálószobával és két fürdőszobával. A gyermekszobában található egy plüssmackó, amivel a szellem négyféleképpen interaktálhat (elcsavarhatja 180 fokban a fejét, eldobhatja, nevetgélhet, elteleportálhatja). 4 pár szekrény van, ahol bizonságban el lehet bújni, és két “rizikós” búvóhely (a gyermekszobában a gyerekágy mellett, és a pincében). Loopolásra alkalmas helyek a garázs és a konyha." },
+  { nev: "Ridgeview Court", meret: "Kicsi", kinez: "Ridgeview négy hálószobával, négy mosdóval, egy garázzsal, és pincével rendelkezik. Több kisebb szobában és szekrényben is el lehet bújni. A plüssmackó a második emeleti lány szobában van. Loopolásra érdemes helyek: étkező asztal." },
+  { nev: "Willow Street", meret: "Kicsi", kinez: "Kisebb pálya két hálószobával, egy fürdőszobával, egy kis garázzsal és egy pincével.Tanglewood után a játék második legkisebb pályája. A fiú szobában található a plüssmackó. Nincsenek szekrények, ahol el lehet bújni, helyettük a garázsban és a pincében lehet “rizikós” búvóhelyeket találni. Érdemes a konyhában, garázsban, és nappaliban loopolni." },
+  { nev: "Edgefield Road", meret: "Közepes", kinez: "Négy hálószobával, hat fürdőszobával, egy étkezővel, egy garázzsal, pincével és sok kisebb szobával rendelkezik. Egy plüssmackó található az épületben. A mérete miatt enyhén “klausztrofób” érzetet kelt. Az emeleten lévő szobák és a hozzájuk tartozó fürdők egynek számítanak. Nyolc szekrénybe lehet elbújni, és egy “rizikós” bútor van, ami mögött el lehet bújni." },
+  
+  { nev: "Grafton Farmhouse", meret: "Közepes", kinez: "A Grafton Farmház kicsi pályának számít, és 3 hálószobával, ebédlővel, könyvtárral, padlással, dolgozószobával és egyéb szobákkal rendelkezik. " },
+  { nev: "Camp Woodwind", meret: "Kicsi", kinez: "Kicsi pálya, és nagyon hasonlít a Maple Lodge Campsite pályára. Négy sátor, egy mosdó, egy piknikező rész és egy tábortűz található meg. Két sátorban el lehet bújni, és van pár “rizikós” búvóhely is (hordók és fagyasztók mögött). A loopolás nem a legbiztosabb megoldás." },
+  { nev: "Maple Lodge Campsite", meret: "Közepes", kinez: "Közepes méretű pálya, sok sátorral, egy recepcióval, mosdóval, és egy faházzal, amiben több szoba van. A ház kulcsa a lábtörlő alatt van. Mivel kinti pálya, az időjárás előnyünkre, vagy hátrányunkra vállhat. 7 kicsi sátor van, és 3 “rizikós” bútor, ami mögé el lehet bújni. Loopolásra alkalmas hely a mosdó. UV bizonyíték a következő helyeken található: sátrakon és az ablakukon, lámpákon, padokon, fagyasztókon." },
+  { nev: "Prison", meret: "Nagy", kinez: "A börtön egy közepes pálya, két nagy börtöntömbbel, és számos kisebb szobával. Minden tömbből van egy kijárat. Két pár szekrény van, és két “rizikós” bútor, ami mögé el lehet bújni." },
+  { nev: "Sunny Meadows", meret: "Nagy", kinez: "A játék legnagyobb pályája, 69 szobával, amin lehet teljes egészében játszani, vagy korlátozott (restricted) módban (5 véletlenszerű helyiség lesz legenerálva)." },
+  { nev: "Bleasdale Farmhouse", meret: "Közepes", kinez: "Két hálószobával, három fürdőszobával, és számos kisebb szobából áll. A zárt szobák búvóhelyeket jeleznek." },
+  { nev: "Point Hope", meret: "Közepes", kinez: "A Point Hope világítótorony egy közepes pályának számít. 10 emeletes, és 12 szobával rendelkezik. " },
+  { nev: "Brownstone High School", meret: "Nagy", kinez: "Nagy pályának számít a játékban (régebben közepesnek számított). 30 tanterem, 8 fürdőszoba, egy étkező, tanulószoba, tesi terem, és két öltözőterem, plusz egyéb kisebb termek találhatók meg. A 20-as számmal kezdődő tantermek a második emeleten vannak. A szellem kedvenc szobája nem lehet folyosón. Nincs búvóhely, viszont vannak “rizikós” bútorok/helyek, ahova el lehet rejtőzni a szellem elől." },
+  { nev: "Sunny Meadows", meret: "Nagy", kinez: "A játék legnagyobb pályája, 69 szobával, amin lehet teljes egészében játszani, vagy korlátozott (restricted) módban (5 véletlenszerű helyiség lesz legenerálva)." }
 ];
 
 function tablaFrissit(index) {
   const palya = palyak[index];
   tabla.innerHTML = `
     <tr>
-      <td>${index + 1}</td>
+      
       <td>${palya.nev}</td>
       <td>${palya.meret}</td>
       <td>${palya.kinez}</td>
