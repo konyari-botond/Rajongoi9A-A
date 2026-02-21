@@ -55,7 +55,6 @@
 <div class="row m-5">
     <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots orb ultraviolet">
         <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
-        
             <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Banshee</h4>
         
             <div class="card-body text-center d-flex flex-column">
@@ -681,9 +680,6 @@
 
 
 
-</section>
-
-
 <script>
 const buttons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".ghost-card");
@@ -691,26 +687,46 @@ const resetBtn = document.getElementById("resetFilter");
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        const filter = button.getAttribute("data-filter");
+        
+        // Aktív állapot váltás
+        button.classList.toggle("active");
+        button.classList.toggle("btn-danger");
+        button.classList.toggle("btn-outline-danger");
 
-        cards.forEach(card => {
-            const evidences = card.getAttribute("data-evidence");
-
-            if (evidences.includes(filter)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
+        applyFilters();
     });
 });
 
+function applyFilters() {
+    const activeFilters = Array.from(document.querySelectorAll(".filter-btn.active"))
+        .map(btn => btn.getAttribute("data-filter"));
+
+    cards.forEach(card => {
+        const evidences = card.getAttribute("data-evidence");
+
+        const matches = activeFilters.every(filter => 
+            evidences.includes(filter)
+        );
+
+        if (activeFilters.length === 0 || matches) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
 resetBtn.addEventListener("click", () => {
+    buttons.forEach(btn => {
+        btn.classList.remove("active", "btn-danger");
+        btn.classList.add("btn-outline-danger");
+    });
+
     cards.forEach(card => {
         card.style.display = "block";
     });
 });
-</script> 
+</script>
 
 
 <!-- Bootstrap JS -->
