@@ -7,7 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
-     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="icon" type="image/x-icon" href="kepek/1024x1024bb.png">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="kvizhezstyle.css" />
 </head>
 <body class="quiz">
@@ -15,7 +16,10 @@
     <nav
       class="navbar navbar-expand-sm bg-primary navbar-light justify-content-center">
       <ul class="navbar-nav font-weight-bold">
-
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Ismertető</a>
+        </li>
+        
         <li class="nav-item">
           <a class="nav-link text-light" href="demon.html">Szörnyek</a>
         </li>
@@ -39,7 +43,6 @@
     </div>
 </section>
 
-<button id="homeBtn" class="home-btn"> Vissza a Főoldalra</button>
 <script>
 const quiz = [
     { question: "Melyik eszközzel lehet szellemdobozt használni?", answers: [
@@ -138,15 +141,6 @@ const questionEl = document.getElementById("question");
 const answerButtonsEl = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("nextBtn");
 const scoreEl = document.getElementById("score")
-const homeBtn = document.getElementById("homeBtn");
-
-homeBtn.addEventListener("click", () => {
-    window.location.href = "index.html";
-});
-
-let currentQuestion = 0;
-let score = 0;
-
 
 /* INDÍTÁS */
 function startQuiz() {
@@ -236,15 +230,18 @@ nextBtn.addEventListener("click", () => {
 });
 
 function showScore() {
-
+    questionEl.innerText = 'A quiz véget ért! 🎉';
     resetState();
-
-    questionEl.innerText = "A quiz véget ért!";
 
     scoreEl.innerText = `Pontszám: ${score} / ${quiz.length}`;
 
-    questionEl.classList.add("quiz-end");
-    scoreEl.classList.add("quiz-end");
+    // Következő gomb átalakítása vissza gombbá
+    nextBtn.innerText = 'Vissza a főoldalra';
+    nextBtn.style.display = 'block';
+
+    nextBtn.onclick = () => {
+        window.location.href = "index.html";
+    };
 }
 
 nextBtn.innerText = "Indítás";
