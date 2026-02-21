@@ -69,3 +69,15 @@
     color: white;
     box-shadow: 0 0 12px rgba(204, 0, 0, 0.7);
 }
+
+/* ===============================
+   Footer
+   =============================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 1.4rem;
+}

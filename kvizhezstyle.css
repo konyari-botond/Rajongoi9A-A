@@ -243,3 +243,15 @@ body.quiz {
     justify-content: center;
     text-align: center;
 }
+
+/* ===============================
+   Footer
+   =============================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 1.4rem;
+}
