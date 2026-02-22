@@ -49,155 +49,143 @@
 
 <script>
 const quiz = [
-    { question: "Melyik eszközzel lehet szellemdobozt használni?", answers: [
-        { text: "Bekapcsolt lámpákkal", correct: false },
-        { text: "Sötétben, a helyszínen", correct: true },
-        { text: "Csak a teherautóban", correct: false },
-        { text: "Külső térben", correct: false }
-    ]},
-    { question: "Melyik bizonyíték NEM létezik a Phasmophobiában?", answers: [
-        { text: "EMF Level 5", correct: false },
-        { text: "Spirit Box", correct: false },
-        { text: "Freezing Temperatures", correct: false },
-        { text: "Ghost Orbs Level 6", correct: true }
-    ]},
-    { question: "Mikor jelenik meg a DOTS Projector bizonyíték?", answers: [
-        { text: "Ha vadászat indul", correct: false },
-        { text: "Ha a játékos meghal", correct: false },
-        { text: "Ha a szellem áthalad rajta", correct: true },
-        { text: "Ha sötét van a teherautóban", correct: false }
-    ]},
-    { question: "Melyik szellem gyorsabb a sötétben?", answers: [
-        { text: "Revenant", correct: false },
-        { text: "Raiju", correct: true },
-        { text: "Spirit", correct: false },
-        { text: "Shade", correct: false }
-    ]},
-    { question: "Melyik szellem NEM vadászik magas sanityn?", answers: [
-        { text: "Shade", correct: true },    
-        { text: "Demon", correct: false },
-        { text: "Oni", correct: false },
-        { text: "Yokai", correct: false }
-    ]},
-    { question: "Mi állítja meg ideiglenesen a szellemet vadászat közben?", answers: [
-        { text: "Crucifix", correct: false },
-        { text: "Salt", correct: false },
-        { text: "Candle", correct: false },
-        { text: "Smudge Stick", correct: true },
-    ]},
-    { question: "Melyik szellem reagál erősebben az elektronikus eszközökre?", answers: [
-        { text: "Spirit", correct: false },
-        { text: "Goryo", correct: false },
-        { text: "Yokai", correct: true },
-        { text: "Mare", correct: false }
-    ]},
-    { question: "Melyik tárgy akadályozza meg a vadászat elindulását?", answers: [
-        { text: "Smudge Stick", correct: false },
-        { text: "Crucifix", correct: true },
-        { text: "Flashlight", correct: false },
-        { text: "Salt", correct: false }
-    ]},
-    { question: "Melyik szellem NEM hagy lábnyomot UV fényben?", answers: [
-        { text: "Wraith", correct: true },
-        { text: "Phantom", correct: false },
-        { text: "Banshee", correct: false },
-        { text: "Poltergeist", correct: false }
-    ]},
-    { question: "Melyik szellem tud teleportálni a játékoshoz?", answers: [
-        { text: "Shade", correct: false },
-        { text: "Goryo", correct: false },
-        { text: "Spirit", correct: false },
-        { text: "Banshee", correct: true }
-    ]},
-    { question: "Melyik bizonyíték látható kizárólag kamerán?", answers: [
-        { text: "DOTS Projector", correct: false },
-        { text: "Ghost Orbs", correct: true },
-        { text: "Freezing Temps", correct: false },
-        { text: "EMF 5", correct: false }
-    ]},
-    { question: "Melyik szellem erős több játékos közelében?", answers: [
-        { text: "Shade", correct: false },
-        { text: "Spirit", correct: false },
-        { text: "Oni", correct: true },
-        { text: "Yurei", correct: false }
-    ]},
-    { question: "Mikor nem működik a Spirit Box?", answers: [
-        { text: "Ha világos van a szobában", correct: true },
-        { text: "Ha alacsony a sanity", correct: false },
-        { text: "Ha DOTS aktív", correct: false },
-        { text: "Ha EMF 5 van", correct: false }
-    ]},
-    { question: "Melyik szellem gyorsabb vadászat közben hidegben?", answers: [
-        { text: "Demon", correct: false },
-        { text: "Revenant", correct: false },
-        { text: "Mare", correct: false },
-        { text: "Hantu", correct: true }
-    ]},
-    { question: "Melyik szellem képes több tárgyat egyszerre eldobni?", answers: [
-        { text: "Shade", correct: false },
-        { text: "Goryo", correct: false },
-        { text: "Poltergeist", correct: true },
-        { text: "Spirit", correct: false }
-    ]}
+{ question: "Melyik szellem képes lemásolni más szellemek képességeit?", answers: [
+    { text: "The Mimic", correct: true },
+    { text: "Oni", correct: false },
+    { text: "Raiju", correct: false },
+    { text: "Shade", correct: false }
+]},
+{ question: "Melyik szellem öregszik és gyengül idővel?", answers: [
+    { text: "Thaye", correct: true },
+    { text: "Jinn", correct: false },
+    { text: "Mare", correct: false },
+    { text: "Yurei", correct: false }
+]},
+{ question: "Melyik szellem gyorsabb elektronikus eszközök közelében?", answers: [
+    { text: "Raiju", correct: true },
+    { text: "Spirit", correct: false },
+    { text: "Shade", correct: false },
+    { text: "Myling", correct: false }
+]},
+{ question: "Melyik szellem nem hagy UV lábnyomot?", answers: [
+    { text: "Wraith", correct: true },
+    { text: "Obake", correct: false },
+    { text: "Phantom", correct: false },
+    { text: "Banshee", correct: false }
+]},
+{ question: "Melyik szellem választ ki egyetlen célpont játékost?", answers: [
+    { text: "Banshee", correct: true },
+    { text: "Oni", correct: false },
+    { text: "Spirit", correct: false },
+    { text: "Yokai", correct: false }
+]},
+{ question: "Melyik szellem mindig tudja a játékos helyét?", answers: [
+    { text: "Deogen", correct: true },
+    { text: "Revenant", correct: false },
+    { text: "Shade", correct: false },
+    { text: "Goryo", correct: false }
+]},
+{ question: "Melyik szellem DOTS bizonyítéka csak kamerán látható?", answers: [
+    { text: "Goryo", correct: true },
+    { text: "Poltergeist", correct: false },
+    { text: "Mare", correct: false },
+    { text: "Spirit", correct: false }
+]},
+{ question: "Melyik eszköz méri az elektromágneses aktivitást?", answers: [
+    { text: "EMF Reader", correct: true },
+    { text: "Hőmérő", correct: false },
+    { text: "UV Lámpa", correct: false },
+    { text: "Spirit Box", correct: false }
+]},
+{ question: "Melyik eszközzel kommunikálhatsz hangalapon a szellemmel?", answers: [
+    { text: "Spirit Box", correct: true },
+    { text: "Video Kamera", correct: false },
+    { text: "Kézi Lámpa", correct: false },
+    { text: "Mozgásérzékelő", correct: false }
+]},
+{ question: "Melyik eszköz képes megakadályozni a vadászat elindulását?", answers: [
+    { text: "Crucifix", correct: true },
+    { text: "Salt", correct: false },
+    { text: "UV Lámpa", correct: false },
+    { text: "Hőmérő", correct: false }
+]},
+{ question: "Melyik eszköz nyugtatja meg ideiglenesen a szellemet?", answers: [
+    { text: "Smudge Stick", correct: true },
+    { text: "Flashlight", correct: false },
+    { text: "Tripod", correct: false },
+    { text: "Kamera", correct: false }
+]},
+{ question: "Melyik szellem gyorsabb hideg hőmérsékleten?", answers: [
+    { text: "Hantu", correct: true },
+    { text: "Mare", correct: false },
+    { text: "Spirit", correct: false },
+    { text: "Oni", correct: false }
+]},
+{ question: "Melyik szellem dobál gyakran több tárgyat?", answers: [
+    { text: "Poltergeist", correct: true },
+    { text: "Shade", correct: false },
+    { text: "Goryo", correct: false },
+    { text: "Yurei", correct: false }
+]},
+{ question: "Melyik bizonyíték látható kizárólag kamerán?", answers: [
+    { text: "Ghost Orbs", correct: true },
+    { text: "EMF Level 5", correct: false },
+    { text: "Freezing Temperatures", correct: false },
+    { text: "Spirit Box", correct: false }
+]},
+{ question: "Melyik szellem ritkábban mutatja magát játékosok közelében?", answers: [
+    { text: "Shade", correct: true },
+    { text: "Oni", correct: false },
+    { text: "Raiju", correct: false },
+    { text: "Banshee", correct: false }
+]}
 ];
+
+let currentQuestion = 0;
+let score = 0;
 
 const questionEl = document.getElementById("question");
 const answerButtonsEl = document.getElementById("answer-buttons");
 const nextBtn = document.getElementById("nextBtn");
-const scoreEl = document.getElementById("score")
+const scoreEl = document.getElementById("score");
 
-/* INDÍTÁS */
+function shuffleArray(array) {
+    return [...array].sort(() => Math.random() - 0.5);
+}
+
 function startQuiz() {
     currentQuestion = 0;
     score = 0;
-
     nextBtn.innerText = "Következő";
-    nextBtn.style.display = "none";
     scoreEl.innerText = "";
-
     showQuestion();
 }
 
-
-/* KÉRDÉS MEGJELENÍTÉS */
 function showQuestion() {
-
     resetState();
-
     const question = quiz[currentQuestion];
     questionEl.innerText = question.question;
 
-    question.answers.forEach(answer => {
-
+    shuffleArray(question.answers).forEach(answer => {
         const button = document.createElement("button");
         button.innerText = answer.text;
         button.classList.add("answer-btn");
 
-        if (answer.correct) {
-            button.dataset.correct = "true";
-        }
+        if (answer.correct) button.dataset.correct = "true";
 
         button.addEventListener("click", selectAnswer);
-
         answerButtonsEl.appendChild(button);
     });
 }
 
-
-/* TÖRLÉS */
 function resetState() {
-
     nextBtn.style.display = "none";
-
     while (answerButtonsEl.firstChild) {
         answerButtonsEl.removeChild(answerButtonsEl.firstChild);
     }
 }
 
-
-/* VÁLASZ KEZELÉS */
 function selectAnswer(e) {
-
     const selectedBtn = e.target;
     const correct = selectedBtn.dataset.correct === "true";
 
@@ -209,20 +197,20 @@ function selectAnswer(e) {
     }
 
     Array.from(answerButtonsEl.children).forEach(button => {
-
         if (button.dataset.correct === "true") {
             button.classList.add("correct");
         }
-
         button.disabled = true;
     });
 
     nextBtn.style.display = "block";
 }
 
-
-/* KÖVETKEZŐ */
 nextBtn.addEventListener("click", () => {
+    if (nextBtn.innerText === "Indítás") {
+        startQuiz();
+        return;
+    }
 
     if (currentQuestion < quiz.length - 1) {
         currentQuestion++;
@@ -230,34 +218,25 @@ nextBtn.addEventListener("click", () => {
     } else {
         showScore();
     }
-
 });
 
 function showScore() {
-    questionEl.innerText = 'A quiz véget ért! 🎉';
+    questionEl.innerText = "A kvíz véget ért! 🎉";
     resetState();
-
     scoreEl.innerText = `Pontszám: ${score} / ${quiz.length}`;
 
-    // Következő gomb átalakítása vissza gombbá
-    nextBtn.innerText = 'Vissza a főoldalra';
-    nextBtn.style.display = 'block';
-
-    nextBtn.onclick = () => {
-        window.location.href = "index.html";
-    };
+    nextBtn.innerText = "Vissza a főoldalra";
+    nextBtn.style.display = "block";
+    nextBtn.onclick = () => window.location.href = "index.html";
 }
 
 nextBtn.innerText = "Indítás";
 nextBtn.style.display = "block";
-
-nextBtn.addEventListener("click", () => {
-    startQuiz();
-}, { once: true });
-</script>        
-    <div class="footer"></div>
-    <script src="/bootstrap/js/bootstrap.min.js">
 </script>
+
+<div class="footer"></div>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
