@@ -47,11 +47,7 @@ body {
 }
 
 /* Aktív menüpont */
-.navbar a.active {
-    background-color: #cc0000;
-    color: white;
-    box-shadow: 0 0 12px rgba(204, 0, 0, 0.7);
-}
+
 
 /* ----------------------- */
 /* QUIZ KÖZÉPRE, KÁRTYA    */
