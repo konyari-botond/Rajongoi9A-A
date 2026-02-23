@@ -38,6 +38,7 @@ body{
 #palyaTabla{
     text-align: center;
     vertical-align: middle;
+    
 }
 
 /* ----------------------- */
@@ -94,5 +95,51 @@ body{
     color: #fff;
     margin-top: 60px;
     font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+
+    #palyaTabla thead {
+        display: none; /* fejléc eltűnik mobilon */
+    }
+
+    #palyaTabla,
+    #palyaTabla tbody,
+    #palyaTabla tr,
+    #palyaTabla td {
+        display: block;
+        width: 100%;
+    }
+
+    #palyaTabla tr {
+        margin-bottom: 20px;
+        border: 2px solid #55030c;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #palyaTabla td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* Címkék hozzáadása mobilon */
+    #palyaTabla td:nth-child(1)::before {
+        content: "Név: ";
+        font-weight: bold;
+        color: #ff4d4d;
+    }
+
+    #palyaTabla td:nth-child(2)::before {
+        content: "Méret: ";
+        font-weight: bold;
+        color: #ff4d4d;
+    }
+
+    #palyaTabla td:nth-child(3)::before {
+        content: "Leírás: ";
+        font-weight: bold;
+        color: #ff4d4d;
+    }
 }
 
