@@ -255,3 +255,20 @@ body.quiz {
     margin-top: 60px;
     font-size: 1.4rem;
 }
+.question-counter {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ff6666;
+    letter-spacing: 1px;
+}
+.question-counter {
+    text-align: center;       
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #ff6666;
+    letter-spacing: 1px;
+    animation: fadeIn 0.4s ease;
+}
