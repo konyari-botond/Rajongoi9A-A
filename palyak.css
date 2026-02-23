@@ -17,18 +17,22 @@ body{
 .table thead th { 
             background-color: #55030c;
              color: white; 
+             text-align: center;
             } 
 .table tbody tr td {
      color: white;
       background-color: rgb(119, 10, 10);
        width: 100px ;
+       text-align: center;vertical-align: middle;
+       padding: 15px;
        
         
     }
 .table{
-    width: 1500px;
-    margin: 0px auto;
+    width: 90%;
+    margin: 80px auto;
     margin-top: 100px;
+    max-width: 1500px;
 }
 
 #palyaTabla{
@@ -91,3 +95,4 @@ body{
     margin-top: 60px;
     font-size: 1.4rem;
 }
+
