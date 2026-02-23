@@ -1,0 +1,733 @@
+<html lang="hu"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Démonok</title>
+    <link rel="icon" type="image/x-icon" href="kepek/1024x1024bb.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="demonok.css">
+</head>
+<body class="bg-black text-light d-flex flex-column vh-100">
+
+    <nav class="navbar navbar-expand-sm bg-danger navbar-dark fixed-top justify-content-center">
+  <ul class="navbar-nav fw-bold">
+    <li class="nav-item">
+      <a class="nav-link text-light" href="index.html">Ismertető</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-light" href="demon.html">Démonok</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-light" href="quiz.html">Kvíz</a>
+    </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="palyak.html">Pályák</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link text-light" href="eszkozok.html">Eszközök</a>
+      </li>
+  </ul>
+  <h1></h1>
+</nav>
+
+<h1 class="text-center mb-5 fw-bold">NAV BAR</h1>
+
+<h1 class="text-center mb-5 text-danger fw-bold m-5">Phasmophobia Démonok</h1>
+ 
+<div class="mb-4 text-center">
+
+    <button class="btn btn-outline-danger filter-btn" data-filter="emf">EMF 5</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter="ultraviolet">Ultraviolet</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter="spirit_box">Spirit Box</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter="freezing">Freezing</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter="orb">Ghost Orb</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter="writing">Writing</button>
+    <button class="btn btn-outline-danger filter-btn" data-filter="dots">DOTS</button>
+
+    <button class="btn btn-danger ms-3" id="resetFilter">Összes</button>
+
+</div>
+
+<!-- Banshee -->
+<section>
+<div class="row m-5">
+    <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots orb ultraviolet">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Banshee</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Egyetlen játékost „célpontnak” választ, és főként őt üldözi. Parabolamikrofonnal különleges sikítást lehet hallani tőle.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge orb text-dark">Ghost Orb</span>
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Deogen -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots spirit_box writing">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Deogen</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Változó (0.4 - 3 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                  Mindig tudja, hol vagy, nem lehet elbújni előle. Közel érve rendkívül lelassul.  
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                    <span class="badge writing text-dark">Writing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ <!-- Goryo -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots emf ultraviolet">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Goryo</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    DOTS-ban csak kamerán keresztül látható. Ritkán vált szobát.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge emf text-dark">EMD 5</span>
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Obambo -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots writing ultraviolet">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Obambo</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Változó (1.45 - 1.96 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Kétféle állapot között váltogat. A nyugodt ilyenkor lassabb (1.45 m/s), és az agresszív (1.96 m/s)
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge writing text-dark">Writing</span>
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Oni -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots emf freezing">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Oni</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Nagyon aktív, gyakran dob tárgyakat. Vadászatkor többet látszik (kevesebbet „villog”), így könnyebb észrevenni.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge freezing text-dark">Freezing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phantom -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots ultraviolet spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Phantom</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Ha lefotózod, eltűnik a képről és nem látszik a fotón. Vadászat közben villogáskor tovább marad láthatatlan, így nehezebb szemmel követni.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Raiju -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots emf orb">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Raiju</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Változó (1.7 - 2.5 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Gyorsabb elektronikus eszközök közelében vadászatkor. Az elektronikai zavar nagyobb távolságból jelentkezik.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge orb text-dark">Ghost Orb</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thaye -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots orb writing">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Thaye</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Változó (1.0 - 2.75 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    A játék elején nagyon aktív és gyors, de idővel „öregszik” és gyengül. Ouija boarddal ellenőrizhető az „életkora”.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge orb text-dark">Ghost Orb</span>
+                    <span class="badge writing text-dark">Writing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wraith -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots emf spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Wraith</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Nem lép bele a sóba, és nem hagy UV lábnyomot. Gyakran teleportál a játékos közelébe EMF-et generálva.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yokai -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots orb spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Yokai</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Hangra érzékeny, beszéd közben magasabb sanityn is vadászhat. Vadászatkor ha messze vagy, kevésbé érzékeli a hangod.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge orb text-dark">Ghost Orb</span>
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Yurei -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="dots freezing orb">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Yurei</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Sanity-csökkentő képessége van, és ajtót teljesen becsaphat. Smudge használat után hosszabb ideig a szobájához kötődik.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge dots text-dark">DOTS</span>
+                    <span class="badge freezing text-dark">Freezing</span>
+                    <span class="badge orb text-dark">Ghost Orb</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Gallu -->
+
+    <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf ultraviolet spirit_box">
+    <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+    
+        <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Gallu</h4>
+    
+        <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.36 - 1.96 m/s)</h5>
+    
+            <p class="card-text text-secondary">
+                Háromféle állapot között váltogat. A normal, ilyenkor lassabb (1.7 m/s). Az ideges, ilyenkor gyors (1.96). És az elgyengült, ilyenkor lassu (1.36 m/s)
+            </p>
+    
+            <div class="mb-3 mt-auto">
+                <span class="badge emf text-dark">EMF 5</span>
+                <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                <span class="badge spirit_box text-dark">Spirit box </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jinn -->
+
+    <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf ultraviolet freezing">
+    <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+    
+        <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Jinn </h4>
+    
+        <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 - 2.5 m/s)</h5>
+    
+            <p class="card-text text-secondary">
+                Ha a breaker be van kapcsolva, gyorsabb, amikor meglát játékost. Nem tudja lekapcsolni a breakert.
+            </p>
+    
+            <div class="mb-3 mt-auto">
+                <span class="badge emf text-dark">EMF 5</span>
+                <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                <span class="badge freezing text-dark"> Freezing </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Myling -->
+
+    <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf ultraviolet writing">
+    <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+    
+        <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Myling</h4>
+    
+        <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+    
+            <p class="card-text text-secondary">
+                Nagyon halk léptei vannak vadászatkor, csak közelről hallani. Gyakran ad paranormális hangjeleket parabolával.
+            </p>
+    
+            <div class="mb-3 mt-auto">
+                <span class="badge emf text-dark">EMF 5</span>
+                <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                <span class="badge writing text-dark">Writing </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Obake -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf ultraviolet ghost-orb">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Obake</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Ritkán hatujjú ujjlenyomatot hagy. Vadászatkor villogás közben más szellemmodellre „vált” egy pillanatra.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                    <span class="badge orb text-dark">Ghost orb </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shade -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf writing freezing">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Shade</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Ritkán vadászik magas sanityn, és kevésbé aktív több játékos jelenlétében. Inkább akkor támad, ha egyedül vagy a szobában.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge writing text-dark">Writing</span>
+                    <span class="badge freezing text-dark">Freezing </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spirit -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf writing spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Spirit</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Nagyon „átlagos” szellem, nincs különleges vadászati képessége. Ha smudge sticket használsz, hosszabb ideig (180 mp) nem tud vadászni
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge spirit_box text-dark">spirit box</span>
+                    <span class="badge writing text-dark">Writing </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The twins -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf freezing spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">The Twins</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Két különböző helyen is képes interakciót produkálni rövid időn belül. Vadászatkor lehet gyorsabb vagy lassabb a „másik iker” miatt.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                    <span class="badge freezing text-dark">Freezing </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mare -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="writing orb spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Mare</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Sötétben nagyobb eséllyel vadászik, és gyakran lekapcsolja a villanyt. Felkapcsolt lámpa csökkenti a vadászati esélyét.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                    <span class="badge orb text-dark">Ghost orb</span>
+                    <span class="badge writing text-dark">Writing </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Moroi -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="writing freezing spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Moroi</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.5 - 2.25 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Átkoz, ha rád válaszol Spirit Boxon vagy parabolán, és gyorsabb lesz alacsony sanityn. Smudge után ideiglenesen megvakul.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                    <span class="badge freezing text-dark">Freezing</span>
+                    <span class="badge writing text-dark">Writing </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Onryo -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="orb freezing spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Onryo</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    A tűz (gyertya) megakadályozza a vadászatot, de ha elfúj több gyertyát, vadászhat. Gyertyák elfújása kulcsjel.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                    <span class="badge orb text-dark">Ghost orb</span>
+                    <span class="badge freezing text-dark">Freezing </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Poltergeist -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="writing ultraviolet spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Poltergeist</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Tárgyakat dobál nagy erővel, akár egyszerre többet is. Vadászatkor egyszerre több tárgy eldobásával sanity-csökkenést okoz.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                    <span class="badge writing text-dark">Writing </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- The Mimic -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="orb freezing spirit_box ultraviolet">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">The Mimic</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Más szellemek képességeit utánozza (pl. gyorsaság, viselkedés). A játék során változhat a „stílusa”.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge spirit_box text-dark">Spirit box</span>
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                    <span class="badge freezing text-dark">Freezing </span>
+                    <span class="badge orb text-dark">Ghost orb </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demon  -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="writing ultraviolet freezing">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Demon</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Nagyon gyakran és alacsony sanity nélkül is tud vadászni. A smudge stick csak rövid ideig (60 mp) tartja vissza.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                    <span class="badge writing text-dark">Writing </span>
+                    <span class="badge freezing text-dark">Freezing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hantu  -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="freezing ultraviolet orb">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Hantu</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.4 - 2.7 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Hideg helyen gyorsabb, melegben lassabb. Vadászatkor hideg levegőt („fagyos leheletet”) lehet látni a száján.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge ultraviolet text-dark">Ultraviolet</span>
+                    <span class="badge freezing text-dark">Freezing </span>
+                    <span class="badge orb text-dark">Ghost orb</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Revenant  -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="writing orb freezing">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Revenant</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.0 - 3.0 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Nagyon lassú, amíg nem lát játékost, de látáskor rendkívül gyors. Ha elbújsz és megszakad a látótáv, azonnal lelassul.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge orb text-dark">Ghost orb</span>
+                    <span class="badge writing text-dark">Writing </span>
+                    <span class="badge freezing text-dark">Freezing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dayan  -->
+
+        <div class="col-12 col-md-6 col-lg-3 mb-5 ghost-card" data-evidence="emf orb spirit_box">
+        <div class="card bg-dark text-light border-danger shadow-lg rounded-4 h-100">
+        
+            <h4 class="card-header bg-danger text-white text-center fw-bold rounded-top-4 ">Dayan</h4>
+        
+            <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title text-danger fw-bold">Sebessége: Átlag (1.0 - 3.0 m/s)</h5>
+        
+                <p class="card-text text-secondary">
+                    Nagyon lassú, amíg nem lát játékost, de látáskor rendkívül gyors. Ha elbújsz és megszakad a látótáv, azonnal lelassul.
+                </p>
+        
+                <div class="mb-3 mt-auto">
+                    <span class="badge emf text-dark">EMF 5</span>
+                    <span class="badge orb text-dark">Ghost orb </span>
+                    <span class="badge spirit_box text-dark">Spirit Box</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".ghost-card");
+const resetBtn = document.getElementById("resetFilter");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        
+        // Aktív állapot váltás
+        button.classList.toggle("active");
+        button.classList.toggle("btn-danger");
+        button.classList.toggle("btn-outline-danger");
+
+        applyFilters();
+    });
+});
+
+function applyFilters() {
+    const activeFilters = Array.from(document.querySelectorAll(".filter-btn.active"))
+        .map(btn => btn.getAttribute("data-filter"));
+
+    cards.forEach(card => {
+        const evidences = card.getAttribute("data-evidence");
+
+        const matches = activeFilters.every(filter => 
+            evidences.includes(filter)
+        );
+
+        if (activeFilters.length === 0 || matches) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+resetBtn.addEventListener("click", () => {
+    buttons.forEach(btn => {
+        btn.classList.remove("active", "btn-danger");
+        btn.classList.add("btn-outline-danger");
+    });
+
+    cards.forEach(card => {
+        card.style.display = "block";
+    });
+});
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</div></body></html>

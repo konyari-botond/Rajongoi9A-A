@@ -1,0 +1,257 @@
+/* ----------------------- */
+/* ALAP BEÁLLÍTÁSOK        */
+/* ----------------------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #2a2a2a);
+    color: #f2f2f2;
+    background-image: url('https://chatgpt.com/backend-api/estuary/content?id=file_0000000092c87246ace0f3ae652938bd&ts=492057&p=fs&cid=1&sig=ee656b25ee2f5ebf9b1700961775d3bca6fc6001f9bf71f860d0e77d6afe8308&v=0') ;
+}
+
+/* ----------------------- */
+/* NAVBAR                  */
+/* ----------------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #000, #1a1a1a);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px black;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar li {
+    font-weight: bold;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff3333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.7);
+}
+
+/* Aktív menüpont */
+.navbar a.active {
+    background-color: #cc0000;
+    color: white;
+    box-shadow: 0 0 12px rgba(204, 0, 0, 0.7);
+}
+
+/* ----------------------- */
+/* QUIZ KÖZÉPRE, KÁRTYA    */
+/* ----------------------- */
+#quiz {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-card {
+    background: linear-gradient(160deg, #151515, #1f1f1f);
+    border: 2px solid #ff3333;
+    border-radius: 15px;
+    padding: 40px;
+    width: 650px;
+    max-width: 95%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.3), 0 0 40px rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ----------------------- */
+/* KÉRDÉS                   */
+/* ----------------------- */
+#question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    text-shadow: 0 0 5px black;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    color: #eee;
+    border: 1px solid #444;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: inset 0 0 5px black;
+}
+
+.answer-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, #333, #222);
+    box-shadow: 0 4px 10px black;
+}
+
+.answer-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.correct {
+    background: linear-gradient(145deg, #1f7a1f, #145214) !important;
+    border-color: #2ecc71 !important;
+    color: white;
+}
+
+.wrong {
+    background: linear-gradient(145deg, #7a1f1f, #521414) !important;
+    border-color: #ff3333 !important;
+    color: white;
+}
+
+#nextBtn {
+    background: linear-gradient(145deg, #ff3333, #cc0000);
+    border: none;
+    color: white;
+    padding: 14px 35px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.6);
+}
+
+#nextBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.9);
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff6666;
+}
+
+#score.animate {
+    animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.footer {
+    background: #000;
+    color: #777;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 -2px 10px black;
+}
+
+@media (max-width: 600px) {
+    .quiz-card { width: 95%; padding: 25px; }
+    #question { font-size: 20px; }
+    #answer-buttons { grid-template-columns: 1fr; }
+    #nextBtn { width: 100%; }
+    .navbar ul { flex-direction: column; gap: 12px; }
+}
+
+#nextBtn {
+    display: block;
+    margin: 25px auto;   
+    text-align: center;
+}
+
+.quiz-next-btn,
+#nextBtn {
+    display: block;
+    margin: 25px auto 0 auto; 
+    text-align: center;
+}
+
+body.quiz {
+    background-image: url("kepek/ChatGPT\ Image\ 2026.\ febr.\ 18.\ 10_45_12.png"); 
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+.home-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; 
+    padding: 10px 18px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(255,51,51,0.7);
+    transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+}
+
+.quiz-score {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.quiz-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ===============================
+   Footer
+   =============================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 1.4rem;
+}

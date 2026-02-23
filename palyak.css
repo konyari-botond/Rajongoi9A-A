@@ -1,0 +1,145 @@
+body{ 
+    background-color: black; 
+}
+.cim{ 
+    color: #dc3545; 
+    text-align: center; 
+    font-weight: bold; 
+    margin-top: 80px; 
+} 
+.carousel-item img {
+     width: 400px;
+      height: 500px;
+       object-fit: cover;
+        margin: 0 auto;
+         margin-top: 50px; 
+        } 
+.table thead th { 
+            background-color: #55030c;
+             color: white; 
+             text-align: center;
+            } 
+.table tbody tr td {
+     color: white;
+      background-color: rgb(119, 10, 10);
+       width: 100px ;
+       text-align: center;vertical-align: middle;
+       padding: 15px;
+       
+        
+    }
+.table{
+    width: 90%;
+    margin: 80px auto;
+    margin-top: 100px;
+    max-width: 1500px;
+}
+
+#palyaTabla{
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+/* ----------------------- */
+/* NAVBAR                  */
+/* ----------------------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #000, #1a1a1a);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px black;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar li {
+    font-weight: bold;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #ff3333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.7);
+}
+
+/* Aktív menüpont */
+.navbar a.active {
+    background-color: #cc0000;
+    color: white;
+    box-shadow: 0 0 12px rgba(204, 0, 0, 0.7);
+}
+
+/* ===============================
+   Footer
+   =============================== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 60px;
+    font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+
+    #palyaTabla thead {
+        display: none; /* fejléc eltűnik mobilon */
+    }
+
+    #palyaTabla,
+    #palyaTabla tbody,
+    #palyaTabla tr,
+    #palyaTabla td {
+        display: block;
+        width: 100%;
+    }
+
+    #palyaTabla tr {
+        margin-bottom: 20px;
+        border: 2px solid #55030c;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #palyaTabla td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+
+    /* Címkék hozzáadása mobilon */
+    #palyaTabla td:nth-child(1)::before {
+        content: "Név: ";
+        font-weight: bold;
+        color: #ff4d4d;
+    }
+
+    #palyaTabla td:nth-child(2)::before {
+        content: "Méret: ";
+        font-weight: bold;
+        color: #ff4d4d;
+    }
+
+    #palyaTabla td:nth-child(3)::before {
+        content: "Leírás: ";
+        font-weight: bold;
+        color: #ff4d4d;
+    }
+}
+
